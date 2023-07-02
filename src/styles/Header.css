@@ -15,9 +15,9 @@
 
 .storename {
   color: rgb(255, 173, 22);
-  font-size: 3.5rem;
+  font-size: 3.8rem;
   font-family: "Times New Roman", Times, serif;
-  font-weight: 700;
+  font-weight: bold;
   text-decoration: none;
   transition: 0.4s ease-in-out;
 }
@@ -38,13 +38,27 @@
   position: relative;
 }
 
-.storename::after, .link::after {
+.link::after {
   content: '';
   position: absolute;
   width: 100%;
   transform: scaleX(0);
   height: 3px;
   bottom: -4px;
+  left: 0;
+  background-color: rgb(255, 173, 22);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+
+.storename::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 3px;
+  bottom: 5px;
   left: 0;
   background-color: rgb(255, 173, 22);
   transform-origin: bottom right;
