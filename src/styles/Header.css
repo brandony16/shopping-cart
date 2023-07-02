@@ -1,30 +1,61 @@
 .header {
-    height: 10vh;
-    width: auto;
-    background-color: black;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    position: sticky;
+  height: 10vh;
+  width: auto;
+  background-color: rgb(8, 189, 221);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: sticky;
 }
 
 .links {
-    display: flex;
-    gap: 3vw;
+  display: flex;
+  gap: 3vw;
 }
 
 .storename {
-    color: rgb(0, 196, 0);
-    font-size: 3.5rem;
-    font-family: 'Times New Roman', Times, serif;
-    font-weight: 700;
-    text-decoration: none;
+  color: rgb(255, 173, 22);
+  font-size: 3.5rem;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 700;
+  text-decoration: none;
+  transition: 0.4s ease-in-out;
 }
 
 .link {
-    color: rgb(255, 255, 255);
-    font-size: 2rem;
-    font-family: 'Times New Roman', Times, serif;
-    font-weight: 700;
-    text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-size: 2rem;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 700;
+  text-decoration: none;
+  transition: 0.4s ease-in-out;
+  text-underline-offset: 9px;
+}
+
+.storename,
+.link {
+  display: inline-block;
+  position: relative;
+}
+
+.storename::after, .link::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 3px;
+  bottom: -4px;
+  left: 0;
+  background-color: rgb(255, 173, 22);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.storename:hover::after, .link:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.active.link {
+  text-decoration: underline rgb(255, 173, 22);
 }

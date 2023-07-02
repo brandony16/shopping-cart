@@ -5,7 +5,7 @@ import "../styles/Header.css"
 const Header = () => {
     return (
         <div className="header">
-            <div className="storename">Optimix</div>
+            <NavLink className="storename" to="/">Fashion Fusion</NavLink>
             <div className="links">
                 <NavLink className="link" to="/">Home</NavLink>
                 <NavLink className="link" to="/shop">Shop</NavLink>

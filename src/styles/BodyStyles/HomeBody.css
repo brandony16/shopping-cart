@@ -1,0 +1,68 @@
+.homeBody {
+  min-height: 85vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10%;
+  background-image: url("../../assets/PolkaDotBackground.png");
+  background-size: 70%;
+  background-position: -5%;
+}
+
+.homeTxtWrap {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+}
+
+.slogan {
+  font-size: 5rem;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 700;
+  line-height: 150%;
+}
+
+.fusion,
+.fashion {
+  font-style: italic;
+}
+
+.fashion {
+  color: rgb(255, 173, 22);
+  text-shadow: -1px 1px 0 #000, 1px 1px 0 #000, 1px -1px 0 #000,
+    -1px -1px 0 #000;
+}
+
+.fusion {
+  color: rgb(8, 189, 221);
+  text-shadow: -1px 1px 0 #000, 1px 1px 0 #000, 1px -1px 0 #000,
+    -1px -1px 0 #000;
+}
+
+.shopNowBtn {
+  border: none;
+  background-color: black;
+  color: white;
+  font-size: 3.3rem;
+  font-family: "Times New Roman", Times, serif;
+  padding: 4px;
+  transition: 0.2s ease-in-out;
+  text-decoration: none;
+  text-align: center;
+  width: 70%;
+  box-shadow: 8px 8px rgb(238, 102, 60);
+}
+
+.shopNowBtn:hover {
+  background-color: rgb(238, 102, 60);
+  box-shadow: 8px 8px black;
+}
+
+.fashionImg {
+  width: 40%;
+  border-radius: 16px;
+  box-shadow: 4px 4px black;
+}
