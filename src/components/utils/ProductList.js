@@ -1,423 +1,517 @@
+import images from "../../assets/products/images";
+
 const ProductList = [
+    // Mens Shirts
+    {
+        name: "Men's ULURU White Tee",
+        gender: "men",
+        type: "shirt",
+        price: "19.99",
+        img: images.men.shirt[0],
+    },
+    {
+        name: "Men's White Long Sleeve",
+        gender: "men",
+        type: "shirt",
+        price: "29.49",
+        img: images.men.shirt[1]
+    },
+    {
+        name: "Men's Milk Jug White Tee",
+        gender: "men",
+        type: "shirt",
+        price: "23.99",
+        img: images.men.shirt[2]
+    },
+    {
+        name: "Men's Floral Button Up Tee",
+        gender: "men",
+        type: "shirt",
+        price: "45.99",
+        img: images.men.shirt[3]
+    },
+    {
+        name: "Men's Taco Black Tee",
+        gender: "men",
+        type: "shirt",
+        price: "22.99",
+        img: images.men.shirt[4],
+    },
+    {
+        name: "Men's Blue Gradient Tee",
+        gender: "men",
+        type: "shirt",
+        price: "25.99",
+        img: images.men.shirt[5],
+    },
+    {
+        name: "Men's Lumberjack Flannel Long Sleeve",
+        gender: "men",
+        type: "shirt",
+        price: "42.99",
+        img: images.men.shirt[6],
+    },
+    {
+        name: "Men's Turquoise Formal Tee",
+        gender: "men",
+        type: "shirt",
+        price: "38.99",
+        img: images.men.shirt[7],
+    },
+    {
+        name: "Men's Hello Kitty Black Tee",
+        gender: "men",
+        type: "shirt",
+        price: "34.99",
+        img: images.men.shirt[8],
+    },
+    // Mens Pants
+    {
+        name: "Men's Black Sleek-Fit Shorts",
+        gender: "men",
+        type: "pants",
+        price: "29.99",
+        img: images.men.pants[0],
+    },
+    {
+        name: "Men's Black Jeans",
+        gender: "men",
+        type: "pants",
+        price: "59.99",
+        img: images.men.pants[1]
+    },
+    {
+        name: "Men's Red Pants",
+        gender: "men",
+        type: "pants",
+        price: "74.99",
+        img: images.men.pants[2]
+    },
+    {
+        name: "Men's Camo Cargo Pants",
+        gender: "men",
+        type: "pants",
+        price: "55.99",
+        img: images.men.pants[3]
+    },
+    {
+        name: "Men's Green Track Pants",
+        gender: "men",
+        type: "pants",
+        price: "49.99",
+        img: images.men.pants[4],
+    },
+    {
+        name: "Men's Palm Tree Shorts",
+        gender: "men",
+        type: "pants",
+        price: "35.99",
+        img: images.men.pants[5],
+    },
+    {
+        name: "Men's Hands Black Shorts",
+        gender: "men",
+        type: "pants",
+        price: "32.99",
+        img: images.men.pants[6],
+    },
+    {
+        name: "Men's WNDR Bones Light Grey Shorts",
+        gender: "men",
+        type: "pants",
+        price: "24.99",
+        img: images.men.pants[7],
+    },
+    {
+        name: "Men's Orange Pants",
+        gender: "men",
+        type: "pants",
+        price: "49.99",
+        img: images.men.pants[8],
+    },
+    // Mens Jackets
+    {
+        name: "Men's PNUMA Outdoor Jacket",
+        gender: "men",
+        type: "jacket",
+        price: "79.59",
+        img: images.men.jacket[0],
+    },
+    {
+        name: "Men's Red HH Outdoor Jacket",
+        gender: "men",
+        type: "jacket",
+        price: "73.99",
+        img: images.men.jacket[1]
+    },
+    {
+        name: "Men's Black Leather Jacket",
+        gender: "men",
+        type: "jacket",
+        price: "83.79",
+        img: images.men.jacket[2],
+    },
+    {
+        name: "Men's Yellow Button Jacket",
+        gender: "men",
+        type: "jacket",
+        price: "80.99",
+        img: images.men.jacket[3],
+    },
+    {
+        name: "Men's Orange & Brown Jacket",
+        gender: "men",
+        type: "jacket",
+        price: "67.29",
+        img: images.men.jacket[4],
+    },
+    {
+        name: "Men's Yellow Strap Jacket",
+        gender: "men",
+        type: "jacket",
+        price: "97.99",
+        img: images.men.jacket[5],
+    },
+    {
+        name: "Men's Blue Jacket",
+        gender: "men",
+        type: "jacket",
+        price: "73.99",
+        img: images.men.jacket[6],
+    },
+    {
+        name: "Men's Orange Rain Jacket",
+        gender: "men",
+        type: "jacket",
+        price: "63.99",
+        img: images.men.jacket[7],
+    },
+    {
+        name: "Men's Premium Leather Jacket",
+        gender: "men",
+        type: "jacket",
+        price: "104.99",
+        img: images.men.jacket[8],
+    },
+    // Mens Sweaters
+    {
+        name: "Men's Japanese Character Hoodie",
+        gender: "men",
+        type: "sweater",
+        price: "66.99",
+        img: images.men.sweater[0],
+    },
+    {
+        name: "Men's SUPREME Yellow Hoodie",
+        gender: "men",
+        type: "sweater",
+        price: "259.99",
+        img: images.men.sweater[1],
+    },
+    {
+        name: "Men's TMNT Black Hoodie",
+        gender: "men",
+        type: "sweater",
+        price: "79.99",
+        img: images.men.sweater[2],
+    },
+    {
+        name: "Men's POKEMON Blue Rayquaza Hoodie",
+        gender: "men",
+        type: "sweater",
+        price: "79.99",
+        img: images.men.sweater[3]
+    },
+    {
+        name: "Men's Rolling Stone Tie-Dye Hoodie",
+        gender: "men",
+        type: "sweater",
+        price: "85.99",
+        img: images.men.sweater[4],
+    },
+    {
+        name: "Men's SUPREME Diagonal Blue Hoodie",
+        gender: "men",
+        type: "sweater",
+        price: "149.99",
+        img: images.men.sweater[5],
+    },
+    {
+        name: "Men's Pink Planet Hoodie",
+        gender: "men",
+        type: "sweater",
+        price: "69.79",
+        img: images.men.sweater[6],
+    },
+    {
+        name: "Men's Blue Friend Hoodie",
+        gender: "men",
+        type: "sweater",
+        price: "64.99",
+        img: images.men.sweater[7],
+    },
+    {
+        name: "Men's Peace Black Hoodie",
+        gender: "men",
+        type: "sweater",
+        price: "75.99",
+        img: images.men.sweater[8],
+    },
+    // Womens Shirts
     {
         name: "",
-        gender: "",
-        type: "",
+        gender: "women",
+        type: "shirt",
         price: "",
-        img: ""
+        img: images.women.shirt[0],
     },
     {
         name: "",
-        gender: "",
-        type: "",
+        gender: "women",
+        type: "shirt",
         price: "",
-        img: ""
+        img: images.women.shirt[1],
     },
     {
         name: "",
-        gender: "",
-        type: "",
+        gender: "women",
+        type: "shirt",
         price: "",
-        img: ""
+        img: images.women.shirt[2],
     },
     {
         name: "",
-        gender: "",
-        type: "",
+        gender: "women",
+        type: "shirt",
         price: "",
-        img: ""
+        img: images.women.shirt[3],
     },
     {
         name: "",
-        gender: "",
-        type: "",
+        gender: "women",
+        type: "shirt",
         price: "",
-        img: ""
+        img: images.women.shirt[4],
     },
     {
         name: "",
-        gender: "",
-        type: "",
+        gender: "women",
+        type: "shirt",
         price: "",
-        img: ""
+        img: images.women.shirt[5],
     },
     {
         name: "",
-        gender: "",
-        type: "",
+        gender: "women",
+        type: "shirt",
         price: "",
-        img: ""
+        img: images.women.shirt[6],
     },
     {
         name: "",
-        gender: "",
-        type: "",
+        gender: "women",
+        type: "shirt",
         price: "",
-        img: ""
+        img: images.women.shirt[7],
     },
     {
         name: "",
-        gender: "",
-        type: "",
+        gender: "women",
+        type: "shirt",
         price: "",
-        img: ""
+        img: images.women.shirt[8],
+    },
+    // Womens Dresses
+    {
+        name: "",
+        gender: "women",
+        type: "dress",
+        price: "",
+        img: images.women.dress[0],
     },
     {
         name: "",
-        gender: "",
-        type: "",
+        gender: "women",
+        type: "dress",
         price: "",
-        img: ""
+        img: images.women.dress[1],
     },
     {
         name: "",
-        gender: "",
-        type: "",
+        gender: "women",
+        type: "dress",
         price: "",
-        img: ""
+        img: images.women.dress[2],
     },
     {
         name: "",
-        gender: "",
-        type: "",
+        gender: "women",
+        type: "dress",
         price: "",
-        img: ""
+        img: images.women.dress[3],
     },
     {
         name: "",
-        gender: "",
-        type: "",
+        gender: "women",
+        type: "dress",
         price: "",
-        img: ""
+        img: images.women.dress[4],
     },
     {
         name: "",
-        gender: "",
-        type: "",
+        gender: "women",
+        type: "dress",
         price: "",
-        img: ""
+        img: images.women.dress[5],
     },
     {
         name: "",
-        gender: "",
-        type: "",
+        gender: "women",
+        type: "dress",
         price: "",
-        img: ""
+        img: images.women.dress[6],
     },
     {
         name: "",
-        gender: "",
-        type: "",
+        gender: "women",
+        type: "dress",
         price: "",
-        img: ""
+        img: images.women.dress[7],
     },
     {
         name: "",
-        gender: "",
-        type: "",
+        gender: "women",
+        type: "dress",
         price: "",
-        img: ""
+        img: images.women.dress[8],
+    },
+    // Womens Pants
+    {
+        name: "",
+        gender: "women",
+        type: "pants",
+        price: "",
+        img: images.women.pants[0],
     },
     {
         name: "",
-        gender: "",
-        type: "",
+        gender: "women",
+        type: "pants",
         price: "",
-        img: ""
+        img: images.women.pants[1],
     },
     {
         name: "",
-        gender: "",
-        type: "",
+        gender: "women",
+        type: "pants",
         price: "",
-        img: ""
+        img: images.women.pants[2],
     },
     {
         name: "",
-        gender: "",
-        type: "",
+        gender: "women",
+        type: "pants",
         price: "",
-        img: ""
+        img: images.women.pants[3],
     },
     {
         name: "",
-        gender: "",
-        type: "",
+        gender: "women",
+        type: "pants",
         price: "",
-        img: ""
+        img: images.women.pants[4],
     },
     {
         name: "",
-        gender: "",
-        type: "",
+        gender: "women",
+        type: "pants",
         price: "",
-        img: ""
+        img: images.women.pants[5],
     },
     {
         name: "",
-        gender: "",
-        type: "",
+        gender: "women",
+        type: "pants",
         price: "",
-        img: ""
+        img: images.women.pants[6],
     },
     {
         name: "",
-        gender: "",
-        type: "",
+        gender: "women",
+        type: "pants",
         price: "",
-        img: ""
+        img: images.women.pants[7],
     },
     {
         name: "",
-        gender: "",
-        type: "",
+        gender: "women",
+        type: "pants",
         price: "",
-        img: ""
+        img: images.women.pants[8],
+    },
+    // Womens Jackets
+    {
+        name: "",
+        gender: "women",
+        type: "jacket",
+        price: "",
+        img: images.women.jacket[0],
     },
     {
         name: "",
-        gender: "",
-        type: "",
+        gender: "women",
+        type: "jacket",
         price: "",
-        img: ""
+        img: images.women.jacket[1],
     },
     {
         name: "",
-        gender: "",
-        type: "",
+        gender: "women",
+        type: "jacket",
         price: "",
-        img: ""
+        img: images.women.jacket[2],
     },
     {
         name: "",
-        gender: "",
-        type: "",
+        gender: "women",
+        type: "jacket",
         price: "",
-        img: ""
+        img: images.women.jacket[3],
     },
     {
         name: "",
-        gender: "",
-        type: "",
+        gender: "women",
+        type: "jacket",
         price: "",
-        img: ""
+        img: images.women.jacket[4],
     },
     {
         name: "",
-        gender: "",
-        type: "",
+        gender: "women",
+        type: "jacket",
         price: "",
-        img: ""
+        img: images.women.jacket[5],
     },
     {
         name: "",
-        gender: "",
-        type: "",
+        gender: "women",
+        type: "jacket",
         price: "",
-        img: ""
+        img: images.women.jacket[6],
     },
     {
         name: "",
-        gender: "",
-        type: "",
+        gender: "women",
+        type: "jacket",
         price: "",
-        img: ""
+        img: images.women.jacket[7],
     },
     {
         name: "",
-        gender: "",
-        type: "",
+        gender: "women",
+        type: "jacket",
         price: "",
-        img: ""
-    },
-    {
-        name: "",
-        gender: "",
-        type: "",
-        price: "",
-        img: ""
-    },
-    {
-        name: "",
-        gender: "",
-        type: "",
-        price: "",
-        img: ""
-    },
-    {
-        name: "",
-        gender: "",
-        type: "",
-        price: "",
-        img: ""
-    },
-    {
-        name: "",
-        gender: "",
-        type: "",
-        price: "",
-        img: ""
-    },
-    {
-        name: "",
-        gender: "",
-        type: "",
-        price: "",
-        img: ""
-    },
-    {
-        name: "",
-        gender: "",
-        type: "",
-        price: "",
-        img: ""
-    },
-    {
-        name: "",
-        gender: "",
-        type: "",
-        price: "",
-        img: ""
-    },
-    {
-        name: "",
-        gender: "",
-        type: "",
-        price: "",
-        img: ""
-    },
-    {
-        name: "",
-        gender: "",
-        type: "",
-        price: "",
-        img: ""
-    },
-    {
-        name: "",
-        gender: "",
-        type: "",
-        price: "",
-        img: ""
-    },
-    {
-        name: "",
-        gender: "",
-        type: "",
-        price: "",
-        img: ""
-    },
-    {
-        name: "",
-        gender: "",
-        type: "",
-        price: "",
-        img: ""
-    },
-    {
-        name: "",
-        gender: "",
-        type: "",
-        price: "",
-        img: ""
-    },
-    {
-        name: "",
-        gender: "",
-        type: "",
-        price: "",
-        img: ""
-    },
-    {
-        name: "",
-        gender: "",
-        type: "",
-        price: "",
-        img: ""
-    },
-    {
-        name: "",
-        gender: "",
-        type: "",
-        price: "",
-        img: ""
-    },
-    {
-        name: "",
-        gender: "",
-        type: "",
-        price: "",
-        img: ""
-    },
-    {
-        name: "",
-        gender: "",
-        type: "",
-        price: "",
-        img: ""
-    },
-    {
-        name: "",
-        gender: "",
-        type: "",
-        price: "",
-        img: ""
-    },
-    {
-        name: "",
-        gender: "",
-        type: "",
-        price: "",
-        img: ""
-    },
-    {
-        name: "",
-        gender: "",
-        type: "",
-        price: "",
-        img: ""
-    },
-    {
-        name: "",
-        gender: "",
-        type: "",
-        price: "",
-        img: ""
-    },
-    {
-        name: "",
-        gender: "",
-        type: "",
-        price: "",
-        img: ""
-    },
-    {
-        name: "",
-        gender: "",
-        type: "",
-        price: "",
-        img: ""
-    },
-    {
-        name: "",
-        gender: "",
-        type: "",
-        price: "",
-        img: ""
-    },
-    {
-        name: "",
-        gender: "",
-        type: "",
-        price: "",
-        img: ""
-    },
-    {
-        name: "",
-        gender: "",
-        type: "",
-        price: "",
-        img: ""
+        img: images.women.jacket[8],
     },  
 ]
 
