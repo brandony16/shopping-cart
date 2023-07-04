@@ -1,32 +1,28 @@
 import React from "react";
+import "../../../styles/ShopStyles/NavBar.css";
 
 const NavBar = ({
-  currGen,
-  handleMen,
-  handleWomen,
-  handleShirt,
-  handlePants,
-  handleSweater,
-  handleJacket,
-  handleDress,
+  gender,
+  handleGenderChange,
+  handleTypeChange,
 }) => {
   return (
     <div className="navBar">
-      <div className="genderSelect">
-        <button className={currGen === "men" ? "men selected" : "men"} onClick={handleMen}>
+      <div className="genderSelectWrap">
+        <button className="genderSelect men" onClick={() => handleGenderChange("men")}>
           Men's
         </button>
-        <button className={currGen === "women" ? "women selected" : "women"} onClick={handleWomen}>
+        <button className="genderSelect women" onClick={() => handleGenderChange("women")}>
           Women's
         </button>
       </div>
       <div className="clotheCategories">
-        <button className="category" onClick={handleShirt}>Shirts</button>
-        <button className="category" onClick={handlePants}>Pants</button>
-        <button className="category" onClick={() => currGen === "men" ? handleSweater : handleDress}>
-          {currGen === "men" ? "Sweatshirts" : "Dresses"}
+        <button className="category shirt" onClick={() => handleTypeChange("shirt")}>Shirts</button>
+        <button className="category pants" onClick={() => handleTypeChange("pants")}>Pants</button>
+        <button className={`category ${gender === "men" ? "sweater" : "dress"}`} onClick={() => gender === "men" ? handleTypeChange("sweater") : handleTypeChange("dress")}>
+          {gender === "men" ? "Sweatshirts" : "Dresses"}
         </button>
-        <button className="category" onClick={handleJacket}>Jacket</button>
+        <button className="category jacket" onClick={() => handleTypeChange("jacket")}>Jacket</button>
       </div>
     </div>
   );

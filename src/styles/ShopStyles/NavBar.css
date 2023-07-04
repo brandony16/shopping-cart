@@ -1,0 +1,58 @@
+.navBar {
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 32px 0;
+}
+
+.genderSelectWrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 20%;
+}
+
+.genderSelect {
+    border: none;
+    background-color: transparent;
+    font-size: 2.3rem;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 4px 8px;
+}
+
+.genderSelect:hover {
+    background-color: rgb(8, 189, 221, 0.4);
+    cursor: pointer;
+}
+
+.genderSelect.active {
+    background-color: rgb(8, 189, 221);
+    color: black;
+    box-shadow: 4px 4px rgb(8, 102, 119);
+}
+
+.clotheCategories {
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.category {
+    border: none;
+    background-color: transparent;
+    font-size: 1.5rem;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 4px 8px;
+}
+
+.category:hover {
+    background-color: rgb(255, 173, 22, 0.4);
+    cursor: pointer;
+}
+
+.category.active {
+    background-color: rgb(255, 173, 22);
+    color: black;
+    box-shadow: 4px 4px rgb(136, 94, 16);
+}
