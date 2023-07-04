@@ -1,81 +1,90 @@
 .aboutBody {
-    min-height: 85vh;
-    display: flex;
-    flex-direction: column;
+  min-height: 85vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .mission {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    height: 75vh;
-    background-image: url("../../assets/clothing-rack.jpg");
-    background-size: cover;
-    background-position: center;
-    padding: 0 10%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 75vh;
+  background-image: url("../../assets/clothing-rack.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 0 10%;
 }
 
 .missionWrap {
-    display: flex;
-    flex-direction: column;
-    width: 35%;
-    background-color: rgb(238, 102, 60);
-    box-shadow: 10px 10px rgb(112, 45, 24);
-    padding: 16px;
+  display: flex;
+  flex-direction: column;
+  width: 35%;
+  background-color: rgb(238, 102, 60);
+  box-shadow: 10px 10px rgb(112, 45, 24);
+  padding: 16px;
 }
 
 .missionTitle {
-    font-size: 3rem;
-    font-family: 'Times New Roman', Times, serif;
+  font-size: 3rem;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .missionTxt {
-    font-size: 1.5rem;
-    font-family: 'Times New Roman', Times, serif;
+  font-size: 1.5rem;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .subFacts {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 144px;
-    padding: 144px 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 196px;
+  padding: 144px 32px;
 }
 
 .factWrap {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    width: 30%;
-    padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 30%;
+  padding: 16px;
+  opacity: 0;
+  transition: all 1s;
+  filter: blur(3px);
+  transform:translateX(-100%);
+}
+
+.factWrap.visible {
+    opacity: 1;
+    transform: translateX(0);
+    filter: blur(0);
 }
 
 #founding {
-    background-color: rgb(8, 189, 221);
-    box-shadow: 10px 10px rgb(8, 102, 119);
-    margin-left: -20%;
+  background-color: rgb(8, 189, 221);
+  box-shadow: 10px 10px rgb(8, 102, 119);
+  margin-left: -20%;
 }
 
 #sustainability {
-    background-color: rgb(255, 173, 22);
-    box-shadow: 10px 10px rgb(136, 94, 16);
-    margin-left: 20%;
+  background-color: rgb(255, 173, 22);
+  box-shadow: 10px 10px rgb(136, 94, 16);
+  margin-left: 20%;
 }
 
 #products {
-    background-color: rgb(238, 102, 60);
-    box-shadow: 10px 10px rgb(112, 45, 24);
-    margin-left: -20%;
-
+  background-color: rgb(238, 102, 60);
+  box-shadow: 10px 10px rgb(112, 45, 24);
+  margin-left: -20%;
 }
 
 .factTitle {
-    font-size: 2.4rem;
-    font-family: 'Times New Roman', Times, serif;
+  font-size: 2.4rem;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .fact {
-    font-size: 1.2rem;
-    font-family: 'Times New Roman', Times, serif;
+  font-size: 1.2rem;
+  font-family: "Times New Roman", Times, serif;
 }

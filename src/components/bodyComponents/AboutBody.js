@@ -1,7 +1,36 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "../../styles/BodyStyles/AboutBody.css"
 
 const AboutBody = () => {
+  const [subfactVisibility, setSubfactVisibility] = useState({
+    founding: false,
+    sustainability: false,
+    products: false
+  });
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const subfactElements = document.querySelectorAll('.factWrap');
+  
+      subfactElements.forEach(element => {
+        const scrollPosition = window.scrollY + window.innerHeight;
+        const elementPosition = element.offsetTop + 100;
+  
+        if (scrollPosition > elementPosition) {
+          setSubfactVisibility(prevVisibility => ({
+            ...prevVisibility,
+            [element.id]: true
+          }));
+        }
+      });
+    };
+  
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+  
   return (
     <div className="aboutBody">
       <div className="mission">
@@ -18,7 +47,7 @@ const AboutBody = () => {
         </div>
       </div>
       <div className="subFacts">
-        <div className="factWrap" id="founding">
+        <div className={`factWrap ${subfactVisibility.founding ? 'visible' : ''}`} id="founding">
           <h2 className="factTitle">Founding</h2>
           <div className="fact">
             Fashion Fusion was founded by Sarah Reynolds, a fashion enthusiast
@@ -31,7 +60,7 @@ const AboutBody = () => {
             Sarah's unwavering commitment to the art of fashion.
           </div>
         </div>
-        <div className="factWrap" id="sustainability">
+        <div className={`factWrap ${subfactVisibility.sustainability ? 'visible' : ''}`} id="sustainability">
           <h2 className="factTitle">Sustainability</h2>
           <div className="fact">
             Fashion Fusion is deeply committed to sustainability and embraces a
@@ -44,7 +73,7 @@ const AboutBody = () => {
             the planet and its communities.
           </div>
         </div>
-        <div className="factWrap" id="products">
+        <div className={`factWrap ${subfactVisibility.products ? 'visible' : ''}`} id="products">
           <h2 className="factTitle">Products</h2>
           <div className="fact">
             Fashion Fusion offers a diverse range of high-quality clothing and

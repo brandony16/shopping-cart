@@ -22,7 +22,7 @@ const NavBar = ({
         <button className={`category ${gender === "men" ? "sweater" : "dress"}`} onClick={() => gender === "men" ? handleTypeChange("sweater") : handleTypeChange("dress")}>
           {gender === "men" ? "Sweatshirts" : "Dresses"}
         </button>
-        <button className="category jacket" onClick={() => handleTypeChange("jacket")}>Jacket</button>
+        <button className="category jacket" onClick={() => handleTypeChange("jacket")}>Jackets</button>
       </div>
     </div>
   );

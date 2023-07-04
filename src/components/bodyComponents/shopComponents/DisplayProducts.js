@@ -10,8 +10,10 @@ const DisplayProducts = ({ productList }) => {
                     <div className="imgWrap" >
                         <img src={product.img} alt={product.name} className="img"/>
                     </div>
-                    <p className="name">{product.name}</p>
-                    <p className="price">{product.price}</p>
+                    <div className="infoWrap">
+                        <p className="name info">{product.name}</p>
+                        <p className="price info">{product.price}</p>
+                    </div>
                 </NavLink>
             ))}
         </div>
