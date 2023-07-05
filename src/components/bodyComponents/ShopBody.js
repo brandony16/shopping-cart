@@ -3,8 +3,10 @@ import NavBar from "./shopComponents/NavBar";
 import DisplayProducts from "./shopComponents/DisplayProducts";
 import ProductList from "../utils/ProductList.js";
 import "../../styles/BodyStyles/ShopBody.css";
+import { NavLink } from "react-router-dom";
+import shoppingBag from "../../assets/shopping-bag.png"
 
-const ShopBody = () => {
+const ShopBody = ({ amountInCart }) => {
   const [gender, setGender] = useState("");
   const [products, setProducts] = useState(ProductList);
   const [type, setType] = useState("");
@@ -63,6 +65,10 @@ const ShopBody = () => {
         handleTypeChange={handleTypeChange}
       />
       <DisplayProducts productList={products} />
+      <NavLink to="/cart" className="cartBtn">
+        <img src={shoppingBag} alt="cart" className="cartImg"/>
+        <div className={amountInCart > 0 ? "cartAmount visible" : "cartAmount"}>{amountInCart > 0 ? amountInCart : ""}</div>
+      </NavLink>
     </div>
   );
 };

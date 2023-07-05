@@ -3,11 +3,11 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import ShopBody from "../components/bodyComponents/ShopBody";
 
-const Shop = () => {
+const Shop = ({ amountInCart }) => {
     return (
         <div className="shop">
             <Header />
-            <ShopBody />
+            <ShopBody amountInCart={amountInCart} />
             <Footer />
         </div>
     )

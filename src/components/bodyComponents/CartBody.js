@@ -1,6 +1,6 @@
 import React from "react";
 
-const CartBody = ({ cart }) => {
+const CartBody = ({ cart, handleQuantityChange }) => {
   return (
     <div className="cartBody">
       <div className="cartItems">
@@ -12,13 +12,14 @@ const CartBody = ({ cart }) => {
               <p className="itemPrice">{item.price}</p>
               <p className="itemSize">{item.size}</p>
               <div className="quantityWrap">
-                <button className="incrementQuantity">+</button>
+                <button className="incrementQuantity" onClick={(e) => handleQuantityChange(e, item, "increment")}>+</button>
                 <input
                   type="number"
                   className="itemQuantity"
                   value={item.quantity}
+                  onChange={(e) => handleQuantityChange(e, item, "itemQuantity")}
                 />
-                <button className="decrementQuantity">-</button>
+                <button className="decrementQuantity" onClick={(e) => handleQuantityChange(e, item, "decrement")}>-</button>
               </div>
             </div>
           </div>

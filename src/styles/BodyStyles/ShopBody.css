@@ -6,3 +6,44 @@
     align-items: center;
     gap: 32px;
 }
+
+.cartBtn {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    background-color: rgb(255, 173, 22);
+    box-shadow: 2px 2px rgb(136, 94, 16);
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.cartImg {
+    width: 50px;
+    margin-bottom: 10px;
+}
+
+.cartAmount {
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    background-color: rgb(238, 102, 60);
+    color: white;
+    font-weight: bold;
+    font-size: 1.3rem;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+}
+
+.visible {
+    opacity: 1;
+}
