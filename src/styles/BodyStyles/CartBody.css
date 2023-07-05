@@ -1,0 +1,125 @@
+.cartBody {
+    width: 100%;
+    min-height: 85vh;
+}
+
+.cartHeader {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+    height: 10vh;
+    padding: 16px 0px;
+}
+
+
+.cartTitle {
+    font-size: 4rem;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.amountOfItems {
+    font-size: 1rem;
+}
+
+.cartItems {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.itemWrap {
+    width: 80%;
+    display: flex;
+    background-color: rgb(241, 241, 241);
+    padding: 8px;
+    border-radius: 8px;
+    gap: 12px;
+}
+
+.itemImgWrap {
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.itemImg {
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.itemInfoWrap {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5%;
+}
+
+.cartItemHeader {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.itemName {
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.itemPriceDollar {
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.itemPriceCent {
+    font-size: 0.9rem;
+}
+
+.itemSize {
+    font-size: 1.2rem;
+}
+
+.quantityWrap {
+    display: flex;
+    border: 1px solid rgb(8, 189, 221);
+    gap: 8px;
+    width: fit-content;
+    padding: 4px;
+    margin-top: 4px;
+}
+
+.quantityChange {
+    border: none;
+    background-color: transparent;
+    font-size: 1.5rem;
+    text-align: center;
+    width: 15px;
+}
+
+.quantityChange:hover {
+    cursor: pointer;
+}
+
+.itemQuantity {
+    background-color: transparent;
+    border: none;
+    width: 40px;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.removeFromCart {
+    width: 30px;
+}
+
+.removeFromCart:hover {
+    cursor: pointer;
+}
