@@ -32,12 +32,12 @@
 
 .productImg {
     width: 50%;
-    background-color: lightgray;
+    background-color: rgb(241, 241, 241);
     padding: 16px 8px;
     border-radius: 16px;
 }
 
-.infoWrap {
+.productInfo {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -46,7 +46,7 @@
     gap: 32px;
 }
 
-.name {
+.productName {
     font-size: 3rem;
     font-weight: bold;
     width: 100%;
@@ -64,4 +64,34 @@
 
 .priceCent {
     font-size: 1.2rem;
+}
+
+.size {
+    border: 2px solid rgb(8, 189, 221);
+    font-size: 1.5rem;
+    background-color: white;
+    margin-top: 32px;
+    padding: 8px;
+    width: 80%;
+}
+
+.size:hover {
+    cursor: pointer;
+}
+
+.size:active {
+    background-color: rgb(8, 189, 221, 0.1);
+}
+
+.addCart {
+    border:2px solid rgb(255, 173, 22);
+    background-color: white;
+    font-size: 1.8rem;
+    padding: 8px 32px;
+    margin-top: 16px;
+}
+
+.addCart:hover {
+    background-color: rgb(255, 173, 22, 0.1);
+    cursor: pointer;
 }
