@@ -25,6 +25,23 @@ function App() {
   }, [cart]);
 
   const addToCart = (product, itemSize) => {
+    let match = cart.filter(
+      (item) => item.name === product.name && item.size === itemSize
+    );
+    if (match[0]) {
+      match[0] = { ...match[0], quantity: match[0].quantity + 1 };
+      setCart((prevCart) => {
+        const updatedCart = prevCart.map((item) => {
+          if (item.name === match[0].name && item.size === match[0].size) {
+            return match[0];
+          }
+          return item;
+        });
+        return updatedCart;
+      });
+      setAmountInCart((prevAmount) => prevAmount + 1);
+      return;
+    }
     const newProduct = { ...product, size: itemSize, quantity: 1 };
     setCart([...cart, newProduct]);
     setAmountInCart((prevAmount) => prevAmount + 1);
@@ -49,7 +66,7 @@ function App() {
 
     setCart((prevCart) => {
       const updatedCart = prevCart.map((item) => {
-        if (item.name === product.name) {
+        if (item.name === product.name && item.size === product.size) {
           return newProduct;
         }
         return item;
@@ -71,7 +88,7 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Home amountInCart={amountInCart} />} />
         <Route path="/shop">
           <Route index element={<Shop amountInCart={amountInCart} />} />
           {ProductList.map((e) => {
@@ -90,11 +107,17 @@ function App() {
             );
           })}
         </Route>
-        <Route path="/about" element={<About />} />
+        <Route path="/about" element={<About amountInCart={amountInCart} />} />
         <Route
           path="/cart"
           element={
-            <Cart cart={cart} handleQuantityChange={handleQuantityChange} handleDeleteProduct={handleDeleteProduct}subtotal={subtotal}/>
+            <Cart
+              cart={cart}
+              handleQuantityChange={handleQuantityChange}
+              handleDeleteProduct={handleDeleteProduct}
+              subtotal={subtotal}
+              amountInCart={amountInCart}
+            />
           }
         />
       </Routes>

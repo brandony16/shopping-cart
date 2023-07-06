@@ -6,7 +6,7 @@ import ShopBody from "../components/bodyComponents/ShopBody";
 const Shop = ({ amountInCart }) => {
     return (
         <div className="shop">
-            <Header />
+            <Header amountInCart={amountInCart}/>
             <ShopBody amountInCart={amountInCart} />
             <Footer />
         </div>

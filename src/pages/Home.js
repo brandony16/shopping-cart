@@ -3,10 +3,10 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import HomeBody from "../components/bodyComponents/HomeBody";
 
-const Home = () => {
+const Home = ({ amountInCart }) => {
     return (
         <div className="home">
-            <Header />
+            <Header amountInCart={amountInCart}/>
             <HomeBody />
             <Footer />
         </div>

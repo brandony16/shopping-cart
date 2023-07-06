@@ -8,9 +8,17 @@ import "../../../styles/ShopStyles/Product.css";
 const Product = ({ product, addToCart, amountInCart }) => {
   const [size, setSize] = useState("S");
 
+
+  const handleButtonAnim = (e) => {
+    e.target.classList.add("submitted");
+    setTimeout(() => {
+      e.target.classList.remove("submitted");
+    }, 300);
+  }
+
   return (
     <div className="productPage">
-      <Header />
+      <Header amountInCart={amountInCart}/>
       <div className="productBody">
         <NavLink to="/shop" className="back">
           {" "}
@@ -39,7 +47,7 @@ const Product = ({ product, addToCart, amountInCart }) => {
             </select>
             <button
               className="addCart"
-              onClick={() => addToCart(product, size)}
+              onClick={(e) => {addToCart(product, size); handleButtonAnim(e)}}
             >
               Add to Cart
             </button>

@@ -16,7 +16,8 @@
     color: black;
     font-weight: bold;
     position: absolute;
-    top: 0;
+    top: 5px;
+    left: 5px;
 }
 
 .back:hover {
@@ -100,9 +101,15 @@
     font-size: 1.8rem;
     padding: 8px 32px;
     margin-top: 16px;
+    transition: 0.3s ease-in-out;
 }
 
 .addCart:hover {
     background-color: rgb(255, 173, 22, 0.1);
     cursor: pointer;
+}
+
+.addCart.submitted {
+    transform: scale(0.98);
+    background-color: rgb(255, 173, 22);
 }

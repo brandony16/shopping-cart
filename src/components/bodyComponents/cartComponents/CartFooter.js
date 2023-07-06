@@ -10,7 +10,7 @@ const CartFooter = ({ subtotal }) => {
                 <div className="totalTopWrap">
                     <div className="subamountWrap">
                         <p className="subtotal subamount">Subtotal:</p>
-                        <p className="subtotal subamount">{subtotal}</p>
+                        <p className="subtotal subamount">{subtotal.toFixed(2)}</p>
                     </div>
                     <div className="subamountWrap">
                         <p className="shipping subamount">Shipping:</p>

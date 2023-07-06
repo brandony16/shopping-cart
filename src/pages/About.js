@@ -3,10 +3,10 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import AboutBody from "../components/bodyComponents/AboutBody";
 
-const About = () => {
+const About = ({ amountInCart }) => {
     return (
         <div className="about">
-            <Header />
+            <Header amountInCart={amountInCart}/>
             <AboutBody />
             <Footer />
         </div>
