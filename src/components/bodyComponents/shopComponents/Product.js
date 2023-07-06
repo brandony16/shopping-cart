@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Header from "../../Header";
 import Footer from "../../Footer";
 import { NavLink } from "react-router-dom";
-import shoppingBag from "../../../assets/shopping-bag.png"
+import shoppingBag from "../../../assets/shopping-bag.png";
 import "../../../styles/ShopStyles/Product.css";
 
 const Product = ({ product, addToCart, amountInCart }) => {
@@ -17,7 +17,9 @@ const Product = ({ product, addToCart, amountInCart }) => {
           &lt; Go Back
         </NavLink>
         <div className="productContent">
-          <img className="productImg" src={product.img} alt={product.name} />
+          <div className="productImgWrap">
+            <img className="productImg" src={product.img} alt={product.name} />
+          </div>
           <div className="productInfo">
             <p className="productName">{product.name}</p>
             <div className="priceWrap">

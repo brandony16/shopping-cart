@@ -75,3 +75,8 @@
 .active.link {
   text-decoration: underline rgb(255, 173, 22);
 }
+
+.headerCart {
+  height: 40px;
+  color: white;
+}

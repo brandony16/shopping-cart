@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Shop from "./pages/Shop";
@@ -11,6 +11,18 @@ import ProductList from "./components/utils/ProductList";
 function App() {
   const [cart, setCart] = useState([]);
   const [amountInCart, setAmountInCart] = useState(0);
+  const [subtotal, setSubtotal] = useState(0);
+
+  useEffect(() => {
+    const calculateSubtotal = () => {
+      let total = 0;
+      cart.forEach((item) => {
+        total += item.price * item.quantity;
+      });
+      return total;
+    };
+    setSubtotal(calculateSubtotal());
+  }, [cart]);
 
   const addToCart = (product, itemSize) => {
     const newProduct = { ...product, size: itemSize, quantity: 1 };
@@ -30,7 +42,7 @@ function App() {
       const quantity = parseInt(e.target.value);
       newProduct = { ...product, quantity: isNaN(quantity) ? 0 : quantity };
     }
-     
+
     if (newProduct.quantity < 1) {
       handleDeleteProduct(product);
     }
@@ -45,28 +57,35 @@ function App() {
       return updatedCart;
     });
 
-    setAmountInCart((prevAmount) => prevAmount + (newProduct.quantity - product.quantity));
-  
+    setAmountInCart(
+      (prevAmount) => prevAmount + (newProduct.quantity - product.quantity)
+    );
   };
 
   const handleDeleteProduct = (product) => {
-    const updatedCart = cart.filter((item) => item !== product)
+    const updatedCart = cart.filter((item) => item !== product);
     setCart(updatedCart);
     setAmountInCart(amountInCart - product.quantity);
-  }
+  };
 
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/shop">
-          <Route index element={<Shop amountInCart={amountInCart}/>} />
+          <Route index element={<Shop amountInCart={amountInCart} />} />
           {ProductList.map((e) => {
             return (
               <Route
                 key={e.name}
                 path={`/shop/${e.name.replace(/\s/g, "-")}`}
-                element={<Product product={e} addToCart={addToCart} amountInCart={amountInCart}/>}
+                element={
+                  <Product
+                    product={e}
+                    addToCart={addToCart}
+                    amountInCart={amountInCart}
+                  />
+                }
               />
             );
           })}
@@ -75,7 +94,7 @@ function App() {
         <Route
           path="/cart"
           element={
-            <Cart cart={cart} handleQuantityChange={handleQuantityChange} />
+            <Cart cart={cart} handleQuantityChange={handleQuantityChange} handleDeleteProduct={handleDeleteProduct}subtotal={subtotal}/>
           }
         />
       </Routes>

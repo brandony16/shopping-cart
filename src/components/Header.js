@@ -1,5 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import shoppingBag from "../assets/shopping-bag.png"
 import "../styles/Header.css"
 
 const Header = () => {
@@ -10,7 +11,7 @@ const Header = () => {
                 <NavLink className="link" to="/">Home</NavLink>
                 <NavLink className="link" to="/shop">Shop</NavLink>
                 <NavLink className="link" to="/about">About</NavLink>
-                <NavLink className="link" to="/cart">Cart</NavLink>
+                <NavLink className="link" to="/cart"><img src={shoppingBag} alt="cart" className="headerCart" /></NavLink>
             </div>
         </div>
     )

@@ -9,8 +9,8 @@
 
 .cartBtn {
     position: fixed;
-    bottom: 24px;
-    right: 24px;
+    bottom: 32px;
+    right: 32px;
     background-color: rgb(255, 173, 22);
     box-shadow: 2px 2px rgb(136, 94, 16);
     border-radius: 50%;
@@ -18,8 +18,7 @@
     height: 70px;
     display: flex;
     justify-content: center;
-    align-items: center;
-    
+    align-items: center; 
 }
 
 .cartImg {

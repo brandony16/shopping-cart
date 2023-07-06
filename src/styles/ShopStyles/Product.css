@@ -30,11 +30,22 @@
     gap: 16px;
 }
 
-.productImg {
+.productImgWrap {
     width: 50%;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.productImg {
+    width: 100%;
+    height: auto;
+    max-height: 100%;
     background-color: rgb(241, 241, 241);
     padding: 16px 8px;
     border-radius: 16px;
+    object-fit: contain;
 }
 
 .productInfo {

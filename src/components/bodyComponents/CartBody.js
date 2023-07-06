@@ -1,8 +1,10 @@
 import React from "react";
 import trashCan from "../../assets/trashCan.svg";
 import "../../styles/BodyStyles/CartBody.css";
+import CartFooter from "./cartComponents/CartFooter";
+import { NavLink } from "react-router-dom";
 
-const CartBody = ({ cart, handleQuantityChange }) => {
+const CartBody = ({ cart, handleQuantityChange, subtotal, handleDeleteProduct }) => {
   return (
     <div className="cartBody">
       <div className="cartHeader">
@@ -25,6 +27,7 @@ const CartBody = ({ cart, handleQuantityChange }) => {
                   src={trashCan}
                   alt="remove from cart"
                   className="removeFromCart"
+                  onClick={() => handleDeleteProduct(item)}
                 />
               </div>
               <div className="priceWrap">
@@ -40,12 +43,13 @@ const CartBody = ({ cart, handleQuantityChange }) => {
                   -
                 </button>
                 <input
-                  type="number"
+                  type="text"
                   className="itemQuantity"
                   value={item.quantity}
                   onChange={(e) =>
                     handleQuantityChange(e, item, "itemQuantity")
                   }
+                  pattern="[0-9]*"
                 />
                 <button
                   className="quantityChange"
@@ -58,6 +62,15 @@ const CartBody = ({ cart, handleQuantityChange }) => {
           </div>
         ))}
       </div>
+      {cart.length > 0 && 
+      <CartFooter  subtotal={subtotal}/>
+      }
+      {cart.length === 0 && 
+      <div className="emptyCart">
+        <p className="emptyCartTitle">You Have Not Added Anything to Your Cart!</p>
+        <NavLink to="/shop" className="emptyCartToShop">Go To Store</NavLink>
+      </div>
+      }
     </div>
   );
 };
