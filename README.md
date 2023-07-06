@@ -7,7 +7,7 @@ The next big thing in fashion, the new (fake) online store Fashion Fusion combin
 ## Features
 
 - Home, Store, About, and Cart Pages
-- Navbar in store to filter between men and women, and their different clothe types
+- Navbar in store to filter between men and women, and their different cloth types
 - Cart allows you to alter quantity, and provides a total price
 - 72 different clothing options in 8 categories
 
