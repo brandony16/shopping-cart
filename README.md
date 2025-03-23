@@ -2,7 +2,7 @@
 
 The next big thing in fashion, the new (fake) online store Fashion Fusion combines a blend a fashion with a fusion of style. 
 <br>
-[Fashion Fusion](https://BabySparta.github.io/shopping-cart/) :point_left:
+[Fashion Fusion](https://brandony16.github.io/shopping-cart/) :point_left:
 
 ## Features
 
